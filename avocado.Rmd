@@ -1,0 +1,38 @@
+---
+title: "Avocado"
+author: ""
+date: "November 18, 2018"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(readr)
+library(dplyr)
+```
+
+### Objective
+
+1. EDA: data visualization (e.g. time trend, geographic distribution vs price/volume)
+
+2. Predict the overall market price; predict the market price geogaphically (each region has 338 observation) time-series
+
+3. scrap avocado recipes from https://loveonetoday.com/ and do some analysis based on the obtained information. 
+
+![Avocado Toast: https://hips.hearstapps.com/del.h-cdn.co/assets/16/01/1452289733-avocado-toast.jpg](https://hips.hearstapps.com/del.h-cdn.co/assets/16/01/1452289733-avocado-toast.jpg)
+
+### Introduction 
+
+The Hass avocado with the dark green bumpy skin, weighed 200-300 grams, is one of the most popular fruit in the United States. It was originally grown in Southern California by Rudolph Hass, an amateur horticulturist. Nowadays, the Hass cultivar has accounted for more than 80% of the avocado crop in the United States and 95% in California (Wikipedia, 2018). 
+
+### Data Processing
+
+```{r}
+avocado <- suppressMessages(read_csv("avocado.csv"))
+```
+
+### Reference 
+
+https://en.wikipedia.org/wiki/Hass_avocado
